@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="100" fill="#2f8f4e"/>
+  <circle cx="100" cy="78" r="38" fill="#ffffff" opacity="0.92"/>
+  <path d="M40 180 q60 -70 120 0 Z" fill="#ffffff" opacity="0.92"/>
+  <text x="100" y="112" text-anchor="middle" font-family="Segoe UI, Arial" font-size="46" font-weight="800" fill="#2f8f4e">JS</text>
+</svg>

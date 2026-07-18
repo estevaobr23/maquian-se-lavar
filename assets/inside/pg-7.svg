@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1131" viewBox="0 0 800 1131">
+  <rect width="800" height="1131" fill="#f7fafc"/>
+  <rect x="0" y="0" width="800" height="120" fill="#0b3a67"/>
+  <text x="40" y="72" font-family="Segoe UI, Arial" font-size="34" font-weight="800" fill="#ffffff">FICHA DE DEFEITO</text>
+  <text x="40" y="105" font-family="Segoe UI, Arial" font-size="20" fill="#9fd0ff">Ficha 7 de 100</text>
+  <rect x="40" y="160" width="720" height="70" rx="12" fill="#e8f1fb" stroke="#c4dcf5"/>
+  <text x="60" y="205" font-family="Segoe UI, Arial" font-size="26" font-weight="700" fill="#0b3a67">SINTOMA: Tambor não gira</text>
+  <text x="60" y="285" font-family="Segoe UI, Arial" font-size="18" font-weight="800" fill="#1e6fd6">POSSÍVEIS CAUSAS</text>
+  <rect x="60" y="300" width="680" height="10" rx="5" fill="#dbe7f4"/>
+  <rect x="60" y="322" width="600" height="10" rx="5" fill="#dbe7f4"/>
+  <rect x="60" y="344" width="540" height="10" rx="5" fill="#dbe7f4"/>
+  <text x="60" y="420" font-family="Segoe UI, Arial" font-size="18" font-weight="800" fill="#1e6fd6">VERIFICAR PRIMEIRO</text>
+  <rect x="60" y="440" width="330" height="150" rx="12" fill="#ffffff" stroke="#c4dcf5"/>
+  <rect x="410" y="440" width="330" height="150" rx="12" fill="#ffffff" stroke="#c4dcf5"/>
+  <circle cx="130" cy="500" r="26" fill="#e8f1fb" stroke="#1e6fd6"/>
+  <circle cx="480" cy="500" r="26" fill="#e8f1fb" stroke="#1e6fd6"/>
+  <rect x="90" y="545" width="270" height="8" rx="4" fill="#dbe7f4"/>
+  <rect x="440" y="545" width="270" height="8" rx="4" fill="#dbe7f4"/>
+  <text x="60" y="660" font-family="Segoe UI, Arial" font-size="18" font-weight="800" fill="#1e6fd6">SEQUÊNCIA DE DIAGNÓSTICO</text>
+  <rect x="60" y="685" width="150" height="60" rx="10" fill="#0b3a67"/>
+  <rect x="245" y="685" width="150" height="60" rx="10" fill="#1e6fd6"/>
+  <rect x="430" y="685" width="150" height="60" rx="10" fill="#2f8f4e"/>
+  <text x="230" y="722" font-family="Segoe UI, Arial" font-size="30" fill="#1e6fd6">→</text>
+  <text x="415" y="722" font-family="Segoe UI, Arial" font-size="30" fill="#1e6fd6">→</text>
+  <text x="60" y="820" font-family="Segoe UI, Arial" font-size="18" font-weight="800" fill="#2f8f4e">POSSÍVEIS SOLUÇÕES</text>
+  <rect x="60" y="840" width="680" height="10" rx="5" fill="#d6efdd"/>
+  <rect x="60" y="862" width="560" height="10" rx="5" fill="#d6efdd"/>
+  <rect x="60" y="1060" width="720" height="2" fill="#c4dcf5"/>
+  <text x="400" y="1095" text-anchor="middle" font-family="Segoe UI, Arial" font-size="16" fill="#6b7c90">100 Defeitos de Lavadoras — Manual Visual de Diagnóstico</text>
+</svg>

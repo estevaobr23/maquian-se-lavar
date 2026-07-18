@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>100 Defeitos de Lavadoras: Manual Visual de Diagnóstico e Soluções</title>
+  <meta name="description" content="Manual visual de consulta técnica com 100 defeitos e sintomas de lavadoras. Transforme o sintoma em uma sequência organizada de diagnóstico, direto no seu celular durante o atendimento." />
+
+  <!-- Pixel Utmify -->
+  <script>
+    window.pixelId = "6a5bc0650c24ee4c9fbe82de";
+    var a = document.createElement("script");
+    a.setAttribute("async", ""); a.setAttribute("defer", "");
+    a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+    document.head.appendChild(a);
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,600&family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{
+      /* Primária — AZUL: autoridade técnica / cor do nicho (seções de destaque) */
+      --primary:        hsl(212, 72%, 34%);
+      --primary-dark:   hsl(214, 78%, 22%);
+      --primary-light:  hsl(210, 68%, 46%);
+      --primary-soft:   hsl(210, 60%, 96%);
+
+      /* Accent — AZUL-AÇO premium (eyebrows, réguas, selos, grifos) */
+      --gold:           hsl(202, 80%, 45%);
+      --gold-dark:      hsl(208, 76%, 36%);
+      --gold-light:     hsl(198, 88%, 62%);
+      --gold-soft:      hsl(202, 72%, 94%);
+
+      /* Apoio — grafite/aço (equilíbrio, segunda leitura) */
+      --olive:          hsl(212, 22%, 30%);
+      --olive-light:    hsl(212, 16%, 42%);
+      --olive-soft:     hsl(210, 30%, 95%);
+
+      /* Neutros — BRANCO / cinza-azulado frio (seções secundárias) */
+      --bg-marfim:      hsl(210, 40%, 98%);
+      --bg-marfim-deep: hsl(210, 34%, 95%);
+      --text-dark:      hsl(214, 38%, 12%);
+      --text-body:      hsl(214, 30%, 20%);
+      --text-muted:     hsl(214, 24%, 30%);
+      --white:          #ffffff;
+      --border:         hsl(210, 30%, 87%);
+
+      /* Verde de conversão — SOMENTE botões de compra e pills "de graça" */
+      /* faixa aprovada: 03a03b (hsl 143,96%,32%) → 10c24b (hsl 140,85%,41%) */
+      --buy:            hsl(140, 85%, 41%);   /* #10c24b */
+      --buy-dark:       hsl(143, 96%, 32%);   /* #03a03b */
+
+      /* Verde de SUCESSO — sinaliza acerto/positivo (checks do "depois", selos) */
+      --success:        hsl(142, 90%, 36%);
+      --success-dark:   hsl(143, 96%, 30%);
+      --success-light:  hsl(140, 85%, 41%);   /* #10c24b — nunca clarear além disto */
+      --success-soft:   hsl(143, 52%, 93%);
+
+      --container: 980px;
+      --container-narrow: 760px;
+      --radius-sm: 10px;  --radius-md: 18px;
+      --radius-lg: 26px;  --radius-pill: 999px;
+
+      --shadow-subtle: 0 4px 18px  hsla(214,50%,25%,.08);
+      --shadow-medium: 0 14px 40px hsla(214,50%,22%,.14);
+      --shadow-large:  0 30px 70px hsla(214,55%,18%,.22);
+      --shadow-gold:   0 12px 34px hsla(202,70%,42%,.30);
+
+      --transition: .4s cubic-bezier(.2,.7,.3,1);
+
+      --font-body:    'Inter', system-ui, sans-serif;
+      --font-display: 'Sora', sans-serif;
+      --font-num:     'Outfit', sans-serif;
+      --font-serif:   'Barlow Condensed', sans-serif;
+    }
+
+    *{ margin:0; padding:0; box-sizing:border-box; }
+    html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+    body{ font-family:var(--font-body); color:var(--text-body);
+          background:var(--bg-marfim); line-height:1.65; overflow-x:hidden; }
+    img{ max-width:100%; display:block; }
+    a{ color:inherit; text-decoration:none; }
+    .container{ width:100%; max-width:var(--container); margin:0 auto; padding:0 22px; }
+    .narrow{ max-width:var(--container-narrow); }
+    section{ padding:84px 0; position:relative; }
+
+    /* ===== .section-head ===== */
+    .section-head{ text-align:center; max-width:660px; margin:0 auto 52px; }
+    .section-head .eyebrow{
+      display:inline-block; font-family:var(--font-num); font-weight:700;
+      letter-spacing:.16em; text-transform:uppercase; font-size:.72rem;
+      color:var(--gold-dark); margin-bottom:14px;
+    }
+    .section-head h2{
+      font-family:var(--font-display); font-weight:800;
+      font-size:clamp(1.7rem, 4.6vw, 2.7rem); line-height:1.15;
+      color:var(--text-dark); letter-spacing:-.01em;
+    }
+    .section-head h2 .hl{ color:#131d2a; }
+    .section-head .rule{
+      width:74px; height:3px; margin:20px auto 0;
+      background:linear-gradient(90deg,var(--gold-light),var(--gold-dark));
+      border-radius:99px;
+    }
+    .section-head p{ margin-top:18px; color:var(--text-muted); font-size:1.06rem; }
+
+    /* ===== Botões ===== */
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:.55em;
+      font-family:var(--font-num); font-weight:700; font-size:1.06rem;
+      white-space:nowrap; text-align:center;
+      color:#fff; background:linear-gradient(135deg,var(--primary-light),var(--primary-dark));
+      padding:18px 34px; border-radius:12px; border:none; cursor:pointer;
+      box-shadow:var(--shadow-medium); transition:var(--transition);
+    }
+    .btn:hover{ transform:translateY(-3px); box-shadow:var(--shadow-large); }
+    .btn .arrow{ transition:transform .3s; }
+    .btn:hover .arrow{ transform:translateX(4px); }
+    .btn-gold{ background:linear-gradient(135deg,var(--gold-light),var(--gold-dark));
+               color:#fff; box-shadow:var(--shadow-gold); }
+    .btn-buy{ background:linear-gradient(135deg,var(--buy),var(--buy-dark)); color:#fff;
+              box-shadow:0 14px 34px hsla(145,90%,30%,.34); animation:pulse 2.4s infinite; }
+    .btn-ghost{ background:transparent; color:var(--primary);
+                border:2px solid var(--border); box-shadow:none; font-weight:600; }
+    .btn-lg{ padding:21px 42px; font-size:1.14rem; }
+    .btn-block{ width:100%; }
+    @keyframes pulse{
+      0%  { box-shadow:0 14px 34px hsla(145,90%,30%,.34), 0 0 0 0    hsla(145,80%,40%,.4); }
+      70% { box-shadow:0 14px 34px hsla(145,90%,30%,.34), 0 0 0 16px hsla(145,80%,40%,0); }
+      100%{ box-shadow:0 14px 34px hsla(145,90%,30%,.34), 0 0 0 0    hsla(145,80%,40%,0); }
+    }
+
+    /* ===== 0b. Barra de urgência (vermelha, estática) ===== */
+    .urgencybar{
+      background:linear-gradient(90deg, hsl(352,80%,46%), hsl(352,84%,52%), hsl(352,80%,46%));
+      color:#fff; text-align:center; padding:9px 16px;
+      font-family:var(--font-num); font-weight:700; font-size:.82rem; letter-spacing:.03em;
+      display:flex; align-items:center; justify-content:center; gap:.5em;
+    }
+    .urgencybar .clock{ animation:tick 1.4s steps(2) infinite; }
+    @keyframes tick{ 50%{opacity:.35} }
+
+    /* ===== 1. Hero — fundo navy, headline em 3 linhas com bloco verde ===== */
+    .hero{
+      background:
+        radial-gradient(1100px 560px at 50% -12%, hsl(210,58%,26%), transparent 62%),
+        radial-gradient(760px 460px at 88% 6%, hsla(202,70%,40%,.30), transparent 60%),
+        linear-gradient(180deg, hsl(214,64%,15%), hsl(214,72%,11%));
+      color:#fff; padding:62px 0 84px; overflow:hidden;
+    }
+    .hero-stack{ display:flex; flex-direction:column; align-items:center;
+                 text-align:center; max-width:800px; margin:0 auto; }
+    /* Headline — cada linha é um bloco pensado */
+    .hero h1{ font-family:var(--font-display); font-weight:800;
+      font-size:clamp(1.55rem, 5.2vw, 3.2rem); line-height:1.16;
+      color:#fff; letter-spacing:-.02em; display:flex; flex-direction:column;
+      align-items:center; gap:.28em; }
+    /* Cada linha de destaque fica sempre em UMA linha, sem quebra */
+    .hero h1 .l1{ color:#fff; white-space:nowrap; }
+    .hero h1 .l3{ color:#fff; font-weight:700;
+      font-size:.86em; }
+    /* Linha do meio — o número em BLOCO verde (mesma cor do CTA) */
+    .hero h1 .hl-block{
+      display:inline-block; align-self:center; white-space:nowrap;
+      background:linear-gradient(135deg, var(--buy), var(--buy-dark));
+      color:#fff; padding:.1em .5em; border-radius:6px;
+      box-shadow:0 12px 30px hsla(143,80%,25%,.45), inset 0 1px 0 hsla(0,0%,100%,.25);
+      line-height:1.12;
+    }
+    .hero h1 .hl{ color:var(--gold-light); }
+
+    .hero p.sub{ margin-top:24px; font-size:1.12rem; color:hsl(200,55%,96%); max-width:620px; }
+    .hero p.sub b{ color:var(--success-light); font-weight:700; }
+
+    /* Selos de confiança antes do CTA (padrão do print) */
+    .hero-trust{ display:flex; gap:10px; flex-wrap:nowrap; justify-content:center; margin-top:34px; }
+    .hero-trust span{ display:inline-flex; align-items:center; gap:.45em;
+      font-family:var(--font-num); font-weight:700; font-size:.82rem; white-space:nowrap;
+      color:hsl(200,60%,96%);
+      background:hsla(0,0%,100%,.09); border:1px solid hsla(198,60%,70%,.3);
+      padding:9px 16px; border-radius:10px; }
+
+    .hero-delivery{ margin-top:22px; font-size:.94rem; font-weight:600; line-height:1.8;
+      color:hsl(200,50%,95%); text-align:center; max-width:360px; margin-left:auto; margin-right:auto; }
+    .hero-delivery b{ color:#fff; font-weight:700; }
+    .hero-delivery .nowrap{ white-space:nowrap; }
+    .hero-delivery-ic{ display:inline-block; width:20px; height:20px; vertical-align:-5px; margin-right:3px; }
+
+    .hero-cta{ margin-top:18px; }
+
+    /* Prova social logo abaixo do CTA */
+    .hero-social{ margin-top:26px; display:flex; flex-direction:column; align-items:center; gap:10px; }
+    .hero-social-avatars{ display:flex; }
+    .hero-social-avatars img{ width:38px; height:38px; border-radius:50%; object-fit:cover;
+      border:2px solid hsl(214,72%,11%); margin-left:-10px; background:#1a2740; }
+    .hero-social-avatars img:first-child{ margin-left:0; }
+    .hero-social-label{ font-family:var(--font-num); font-weight:800; font-size:.9rem;
+      letter-spacing:.03em; color:var(--gold-light); text-transform:uppercase; }
+
+    .book-stage{ position:relative; display:flex; justify-content:center;
+                 align-items:center; margin-top:20px; width:100%; }
+    .book-glow{ position:absolute; width:86%; height:74%;
+      background:radial-gradient(circle,hsla(198,80%,55%,.5),transparent 66%);
+      filter:blur(46px); opacity:.6; z-index:0; }
+    .hero-mockup{ position:relative; z-index:1; width:100%; max-width:660px; height:auto;
+      filter:drop-shadow(0 30px 55px hsla(214,80%,6%,.55)); }
+
+    /* ===== 2. Vitrine ===== */
+    .vitrine{ background:var(--white); }
+    .grid-desire{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+    .desire-card{
+      background:var(--bg-marfim); border:1px solid var(--border);
+      border-radius:var(--radius-md); padding:30px 26px;
+      transition:var(--transition); position:relative; overflow:hidden;
+    }
+    .desire-card:hover{ transform:translateY(-6px); box-shadow:var(--shadow-medium); }
+    .desire-card .card-img{
+      display:block; width:calc(100% + 52px); max-width:none; margin:-30px -26px 22px;
+      aspect-ratio:1 / 1.414; object-fit:cover; object-position:center top;
+      border-bottom:1px solid var(--border);
+      -webkit-mask-image:linear-gradient(180deg,#000 78%,transparent);
+              mask-image:linear-gradient(180deg,#000 78%,transparent);
+    }
+    .desire-card--wide{ grid-column:span 2; display:flex; gap:26px; align-items:center; }
+    .desire-card--wide .card-img{
+      width:200px; flex:0 0 200px; margin:-30px 0 -30px -26px;
+      align-self:stretch; aspect-ratio:auto; height:auto; object-position:center;
+      -webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);
+              mask-image:linear-gradient(90deg,#000 82%,transparent);
+      border-bottom:none; border-right:1px solid var(--border);
+    }
+    .desire-card .verse{
+      font-family:var(--font-num); font-weight:800; font-size:.78rem;
+      color:var(--gold-dark); letter-spacing:.08em; text-transform:uppercase; margin-bottom:12px; }
+    .desire-card h3{ font-family:var(--font-display); font-weight:700; font-size:1.24rem;
+                     color:var(--primary); margin-bottom:10px; line-height:1.25; }
+    .desire-card p{ font-family:var(--font-serif); font-size:1.12rem; line-height:1.4; }
+    .desire-card .quote{ display:block; margin-top:14px; font-size:.98rem; font-style:italic;
+      color:var(--olive-light); border-left:2px solid var(--gold); padding-left:12px; }
+
+    /* .desire-strip */
+    .desire-strip{
+      --scroll: 0;
+      margin-top:48px; max-width:720px; margin-inline:auto; text-align:center;
+      position:relative; isolation:isolate; border-radius:var(--radius-lg); padding:40px 48px;
+      background:
+        radial-gradient(760px 240px at 50% -40%, hsla(202,72%,52%,.30), transparent 72%),
+        linear-gradient(150deg, var(--primary-light), var(--primary-dark) 78%);
+      box-shadow:var(--shadow-large), inset 0 1px 0 hsla(200,70%,80%,.14);
+      overflow:hidden;
+    }
+    .desire-strip::before{
+      content:""; position:absolute; inset:0; z-index:-1; border-radius:inherit; padding:14px;
+      background:radial-gradient(circle, hsla(198,80%,78%,.9) 1.6px, transparent 2px) 0 0 / 13px 13px;
+      -webkit-mask:linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite:xor; mask-composite:exclude;
+      -webkit-mask-clip:padding-box, border-box;
+      opacity:.55; background-position: calc(var(--scroll) * 13px) center;
+    }
+    .desire-strip::after{
+      content:""; position:absolute; inset:0; z-index:-1; border-radius:inherit;
+      background:radial-gradient(420px 300px at calc(var(--scroll) * 130% - 15%) 40%,
+                 hsla(198,90%,76%,.24), transparent 62%);
+      pointer-events:none; transition:background .1s linear;
+    }
+    .desire-strip .ds-icon{ display:block; font-size:1.5rem; color:var(--gold-light);
+      opacity:.9; margin-bottom:10px; letter-spacing:.3em; }
+    .desire-strip .ds-text{ font-family:var(--font-serif); font-size:1.5rem;
+      line-height:1.4; color:#eef7ff; }
+    .desire-strip strong{ color:var(--gold-light); }
+    .desire-strip .ds-underline{ position:relative; color:#fff; white-space:nowrap; }
+    .desire-strip .ds-underline::after{
+      content:""; position:absolute; left:0; right:0; bottom:-4px; height:3px;
+      border-radius:99px; transform-origin:left center; transform:scaleX(var(--scroll));
+      background:linear-gradient(90deg, var(--gold-light), var(--gold));
+      box-shadow:0 0 12px hsla(198,85%,65%,.6);
+    }
+    @media (prefers-reduced-motion: reduce){
+      .desire-strip::before,.desire-strip::after{ background-position:center; }
+      .desire-strip .ds-underline::after{ transform:scaleX(1); }
+    }
+
+    /* ===== 3. Comparativo — modelado no padrão "antes / depois" ===== */
+    .compare{ background:linear-gradient(180deg,var(--bg-marfim),var(--bg-marfim-deep)); }
+    .compare-grid{ display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:stretch; }
+    .compare-col{
+      position:relative; border-radius:var(--radius-lg);
+      padding:30px 30px 34px; border:1.5px solid; box-shadow:var(--shadow-subtle);
+      transition:var(--transition);
+    }
+    .compare-col:hover{ transform:translateY(-4px); box-shadow:var(--shadow-medium); }
+    /* card ANTES — rosa levíssimo, borda de dor suave */
+    .compare-col.bad{
+      background:linear-gradient(180deg, hsl(0,60%,99%), hsl(0,55%,97.5%));
+      border-color:hsl(0,55%,90%);
+    }
+    /* card DEPOIS — verde levíssimo (faixa aprovada), borda de sucesso suave */
+    .compare-col.good{
+      background:linear-gradient(180deg, hsl(140,55%,98.5%), hsl(143,50%,96.5%));
+      border-color:hsl(143,50%,84%);
+    }
+
+    /* Badge do topo — pill discreta com fundo suave + ícone quadrado colorido */
+    .compare-col .tag{
+      display:inline-flex; align-items:center; gap:.55em;
+      font-family:var(--font-display); font-weight:800;
+      font-size:1.12rem; letter-spacing:-.01em; line-height:1.2;
+      padding:9px 18px 9px 12px; border-radius:var(--radius-pill); margin-bottom:22px;
+      text-transform:none;
+    }
+    .compare-col .tag .chk{
+      flex:none; width:26px; height:26px; border-radius:8px;
+      display:grid; place-items:center; font-size:.9rem; font-weight:900; color:#fff;
+      box-shadow:0 4px 10px hsla(0,0%,0%,.14);
+    }
+    .bad .tag{ background:hsl(0,60%,95%); color:hsl(352,72%,45%); }
+    .bad .tag .chk{ background:linear-gradient(135deg, hsl(352,78%,58%), hsl(352,72%,46%)); }
+    .good .tag{ background:hsl(143,52%,92%); color:var(--success-dark); }
+    .good .tag .chk{ background:linear-gradient(135deg, var(--buy), var(--buy-dark)); }
+
+    /* Título/legenda internos (opcionais — o print usa só o badge como título) */
+    .compare-col h3{ font-family:var(--font-display); font-weight:700; font-size:1.28rem;
+      margin-bottom:6px; color:var(--text-dark); display:none; }
+    .compare-col .cap{ font-size:.95rem; margin-bottom:20px; color:var(--text-muted); display:none; }
+
+    .compare-col ul{ list-style:none; display:flex; flex-direction:column; gap:18px; }
+    .compare-col li{ display:flex; gap:13px; align-items:flex-start;
+      font-size:1.02rem; line-height:1.5; color:var(--text-body); }
+    .compare-col li .ic{ flex:none; width:24px; height:24px; border-radius:50%;
+      display:grid; place-items:center; font-weight:800; font-size:.82rem; margin-top:2px; color:#fff; }
+    .bad  li .ic{ background:linear-gradient(135deg, hsl(352,78%,62%), hsl(352,72%,50%));
+      box-shadow:0 2px 8px hsla(352,70%,45%,.32); }
+    .good li .ic{ background:linear-gradient(135deg, var(--buy), var(--buy-dark));
+      box-shadow:0 2px 8px hsla(143,80%,30%,.32); }
+    .good li b{
+      color:var(--success-dark); font-weight:800;
+      text-decoration:underline; text-decoration-color:hsla(143,80%,42%,.5);
+      text-decoration-thickness:2px; text-underline-offset:3px;
+      -webkit-box-decoration-break:clone; box-decoration-break:clone;
+    }
+    .bad li b{ color:hsl(352,68%,48%); font-weight:800; }
+
+    /* ===== 4. Veja por dentro ===== */
+    .inside{ background:var(--white); }
+    .flip-wrap{ max-width:1180px; margin:0 auto 54px; }
+    .flip-embed{ background:linear-gradient(135deg,var(--olive),hsl(212,26%,18%));
+      padding:6px; border-radius:var(--radius-lg); box-shadow:var(--shadow-large); }
+    .flip-embed .fp-iframe{ display:block; width:100%; height:860px; border:none;
+      border-radius:var(--radius-md); background:#fbfdff; }
+    .flip-hint{ text-align:center; margin-top:16px; font-family:var(--font-serif);
+      font-style:italic; font-size:1.1rem; color:var(--text-muted); }
+
+    .page-marquee{ display:flex; flex-direction:column; gap:10px; }
+    .pm-row{ overflow-x:clip; overflow-y:visible;
+      -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
+              mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent); }
+    .pm-track{ display:flex; gap:26px; width:max-content; will-change:transform; padding:14px 0; }
+    .pm-left { animation:pm-scroll-left  36s linear infinite; }
+    .pm-right{ animation:pm-scroll-right 36s linear infinite; }
+    .pm-slow { animation-duration:46s; }
+    .page-marquee:hover .pm-track{ animation-play-state:paused; }
+    .pm-img{ display:block; height:520px; width:auto; flex:none;
+      border-radius:var(--radius-md); border:1px solid var(--border);
+      box-shadow:0 6px 18px hsla(214,30%,20%,.12); object-fit:contain; background:#fbfdff; }
+    @keyframes pm-scroll-left { from{transform:translateX(0)}    to{transform:translateX(-50%)} }
+    @keyframes pm-scroll-right{ from{transform:translateX(-50%)} to{transform:translateX(0)} }
+    @media (prefers-reduced-motion:reduce){ .pm-track{animation:none} .pm-row{overflow-x:auto} }
+
+    .mid-cta{ margin-top:48px; text-align:center;
+      background:linear-gradient(135deg,var(--gold-soft),var(--olive-soft));
+      border-radius:var(--radius-lg); padding:40px 30px; }
+    .mid-cta p{ font-family:var(--font-serif); font-size:1.45rem; color:var(--text-dark); }
+    .mid-cta p strong{ color:var(--primary); }
+    .mid-cta .small{ font-family:var(--font-body); font-size:.94rem; color:var(--text-muted); margin:8px 0 22px; }
+
+    /* ===== 5. Personas ===== */
+    .personas{ background:linear-gradient(180deg,var(--bg-marfim),var(--white)); }
+    .grid-persona{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+    .persona-card{ background:#fff; border:1px solid var(--border);
+      border-radius:var(--radius-lg); padding:32px 26px; text-align:center;
+      transition:var(--transition); }
+    .persona-card:hover{ transform:translateY(-6px); box-shadow:var(--shadow-medium); }
+    .persona-card .ic{ width:64px; height:64px; margin:0 auto 18px; border-radius:50%;
+      display:grid; place-items:center; font-size:1.8rem; color:#fff;
+      background:linear-gradient(135deg,var(--primary-light),var(--primary-dark)); }
+    .persona-card:nth-child(2) .ic{ background:linear-gradient(135deg,var(--gold),var(--gold-dark)); color:#fff; }
+    .persona-card:nth-child(3) .ic{ background:linear-gradient(135deg,var(--olive-light),var(--olive)); }
+    .persona-card h3{ font-family:var(--font-display); font-weight:700; font-size:1.24rem;
+                      color:var(--text-dark); margin-bottom:10px; }
+    .persona-card p{ font-family:var(--font-serif); font-size:1.14rem; line-height:1.4; }
+    .persona-extra{ margin-top:26px; text-align:center; color:var(--olive); font-weight:600; }
+    .persona-extra span{ color:var(--primary); }
+
+    /* ===== 6. Bônus ===== */
+    .bonus{ background:linear-gradient(160deg,var(--primary-dark),var(--primary)); color:#fff; }
+    .bonus .section-head .eyebrow{ color:var(--gold-light); }
+    .bonus .section-head h2{ color:#fff; }
+    .bonus .section-head h2 .hl{ color:inherit; }
+    .bonus .section-head p{ color:hsl(200,55%,95%); }
+    .grid-bonus{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; padding-top:56px; }
+    .bonus-card{ background:#fff; border:1px solid var(--border);
+      border-radius:var(--radius-lg); padding:52px 26px 28px;
+      display:flex; flex-direction:column; box-shadow:var(--shadow-medium);
+      transition:var(--transition); }
+    .bonus-card:hover{ transform:translateY(-8px); box-shadow:var(--shadow-large);
+                       border-color:var(--gold); }
+    .bonus-card .tagline{ font-family:var(--font-num); font-weight:800; font-size:.72rem;
+      letter-spacing:.12em; text-transform:uppercase; color:var(--gold-dark); margin:28px 0 0; }
+    .bonus-card .cover{ aspect-ratio:16/10; margin:-38px 0 10px;
+      background:transparent; border:none; box-shadow:none; overflow:visible;
+      display:grid; place-items:center; }
+    .bonus-card .cover img{ width:112%; max-width:none; height:auto; object-fit:contain;
+      filter:drop-shadow(0 18px 26px hsla(214,45%,12%,.32));
+      transition:transform .45s cubic-bezier(.2,.7,.3,1); }
+    .bonus-card:hover .cover img{ transform:translateY(-6px) scale(1.04); }
+    .bonus-card h3{ font-family:var(--font-serif); font-weight:700; font-size:1.4rem;
+                    color:var(--primary); margin-bottom:8px; }
+    .bonus-card p{ font-size:.96rem; line-height:1.5; flex:1; color:var(--text-body); }
+    .bonus-price{ margin-top:18px; padding-top:16px; border-top:1px solid var(--border);
+      display:flex; align-items:center; justify-content:space-between; }
+    .bonus-price s{ color:hsl(0,72%,50%); font-size:.95rem; font-weight:600; }
+    .bonus-price .free{ font-family:var(--font-num); font-weight:800; font-size:.82rem;
+      color:#fff; background:linear-gradient(135deg,var(--buy),var(--buy-dark));
+      padding:5px 12px; border-radius:var(--radius-pill);
+      box-shadow:0 8px 20px hsla(145,90%,30%,.28); }
+
+    .bonus-final{ margin-top:54px; max-width:640px; margin-inline:auto; text-align:center;
+      position:relative; isolation:isolate; border-radius:var(--radius-lg); padding:40px 34px 38px;
+      background:#fff; border:1px solid var(--border); box-shadow:var(--shadow-large);
+      overflow:hidden; }
+    .bonus-final::after{ content:""; position:absolute; top:0; bottom:0; left:-60%;
+      width:45%; z-index:-1;
+      background:linear-gradient(100deg, transparent, hsla(145,60%,75%,.12), transparent);
+      transform:skewX(-18deg); animation:bonus-shine 5.5s ease-in-out infinite; }
+    @keyframes bonus-shine{ 0%,60%{left:-60%} 100%{left:130%} }
+    .bonus-final-badge{ display:inline-flex; align-items:center; gap:.5em;
+      font-family:var(--font-num); font-weight:800; font-size:.78rem;
+      text-transform:uppercase; color:#fff;
+      background:linear-gradient(135deg,var(--primary-light),var(--primary-dark));
+      padding:7px 16px; border-radius:var(--radius-pill); margin-bottom:18px;
+      box-shadow:var(--shadow-medium); animation:badge-bob 2.6s ease-in-out infinite; }
+    @keyframes badge-bob{ 0%,100%{transform:translateY(0)} 50%{transform:translateY(-4px)} }
+    .bonus-sum{ font-family:var(--font-serif); font-size:1.5rem;
+                color:var(--text-dark); margin:0 0 26px; }
+    .bonus-sum .was{ color:hsl(0,72%,50%); font-weight:600; text-decoration-thickness:2px; }
+    .bonus-sum strong{ color:var(--buy-dark); font-weight:700; }
+    .bonus-final-note{ display:block; margin-top:16px; font-size:.86rem; color:var(--text-muted); }
+
+    /* ===== 7. Depoimentos ===== */
+    .testi{ background:var(--white); }
+    .grid-testi{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+    .testi-card{ background:var(--bg-marfim); border:1px solid var(--border);
+      border-radius:var(--radius-lg); padding:34px 28px; transition:var(--transition);
+      display:flex; flex-direction:column; align-items:center; text-align:center; }
+    .testi-card:hover{ transform:translateY(-5px); box-shadow:var(--shadow-medium); }
+    .testi-head{ display:flex; flex-direction:column; align-items:center; gap:4px; margin-bottom:16px; }
+    .testi-head .avatar{ width:82px; height:82px; border-radius:50%; object-fit:cover;
+      border:3px solid #fff; box-shadow:0 4px 14px hsla(214,30%,25%,.16); margin-bottom:12px; }
+    .testi-head .name{ font-family:var(--font-num); font-weight:700; color:var(--text-dark); }
+    .testi-head .meta{ font-size:.85rem; color:var(--text-muted); }
+    .testi-head .verified{ color:#0aa43e; font-weight:700; }
+    .testi-card .stars{ color:#f2a800; letter-spacing:2px; margin:6px 0 16px; }
+    .testi-card .quote{ font-size:1rem; line-height:1.6; }
+    .testi-card .quote strong{ color:var(--text-dark); font-weight:700;
+      text-decoration:underline; text-decoration-color:hsla(202,80%,45%,.55);
+      text-decoration-thickness:2px; text-underline-offset:3px;
+      -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+
+    /* ===== 8. Oferta ===== */
+    .offer{ background:linear-gradient(160deg,hsl(212,60%,26%),hsl(214,78%,14%)); }
+    .offer .section-head .eyebrow{ color:var(--gold-light); }
+    .offer .section-head h2{ color:#fff; }
+    .offer .section-head h2 .hl{ color:inherit; }
+    .offer .section-head p{ color:hsl(200,55%,95%); }
+    .offer-grid{ display:grid; grid-template-columns:.85fr 1.15fr; gap:26px; align-items:stretch; }
+    .plan{ background:#fff; border:1px solid var(--border); border-radius:var(--radius-lg);
+      padding:34px 30px; display:flex; flex-direction:column; box-shadow:var(--shadow-subtle); }
+    .plan h3{ font-family:var(--font-display); font-weight:700; font-size:1.4rem; margin-bottom:4px; }
+    .plan .psub{ font-size:.95rem; margin-bottom:18px; }
+    .plan.basic{ background:hsla(0,0%,100%,.07); border-color:hsla(200,60%,80%,.18);
+      box-shadow:none; backdrop-filter:blur(2px); }
+    .plan.basic h3, .plan.basic .price{ color:#fff; }
+    .plan.basic .psub{ color:hsl(200,50%,94%); }
+    .plan.basic li{ color:hsl(200,55%,96%); }
+    .plan.basic li.no{ color:hsla(200,45%,90%,.7); }
+    .plan.basic .btn-ghost{ color:#fff; border-color:hsla(200,60%,85%,.35); }
+    .plan.vip{ border:2px solid var(--gold); box-shadow:var(--shadow-large);
+      position:relative; background:#fff; padding-top:46px; text-align:center; }
+    .plan.vip .ribbon{ position:absolute; top:0; left:50%; transform:translate(-50%,-50%);
+      display:inline-flex; align-items:center; gap:.4em; white-space:nowrap;
+      background:linear-gradient(90deg,var(--gold),var(--gold-dark)); color:#fff;
+      font-family:var(--font-num); font-weight:800; font-size:.74rem; letter-spacing:.08em;
+      text-transform:uppercase; padding:9px 22px; border-radius:var(--radius-pill);
+      box-shadow:var(--shadow-medium); }
+    .plan.vip h3{ color:var(--text-dark); }
+    .plan.vip .psub{ color:var(--text-muted); }
+    .plan.vip .plan-mockup{ display:block; width:100%; max-width:420px; margin:6px auto 20px; }
+    .plan.vip .price-row{ display:flex; flex-direction:column; align-items:center; gap:2px; }
+    .plan.vip .anchor{ color:var(--text-muted); font-size:1.05rem; }
+    .plan.vip .anchor s{ color:hsl(0,72%,50%); }
+    .plan.vip .price{ color:var(--buy-dark); font-size:3rem; }
+    .plan.vip .installment{ font-family:var(--font-num); font-weight:600; color:var(--olive);
+      font-size:.98rem; margin-top:6px; }
+    .plan.vip ul{ text-align:left; }
+    .plan.vip li .ic{ background:var(--success-soft); color:var(--success-dark); }
+    .plan .price{ font-family:var(--font-num); font-weight:800; font-size:2.4rem;
+                  line-height:1; margin-bottom:4px; }
+    .plan ul{ list-style:none; display:flex; flex-direction:column; gap:12px; margin:22px 0; flex:1; }
+    .plan li{ display:flex; gap:11px; align-items:flex-start; font-size:.98rem; }
+    .plan li .ic{ flex:none; width:22px; height:22px; border-radius:50%;
+                  display:grid; place-items:center; font-size:.78rem; font-weight:800; }
+    .plan li.yes .ic{ background:var(--success-soft); color:var(--success-dark); }
+    .plan li.no{ color:var(--text-muted); }
+    .plan li.no .ic{ background:hsl(0,45%,94%); color:hsl(0,55%,50%); }
+    .offer-secure{ margin-top:16px; text-align:center; font-size:.85rem; color:var(--text-muted);
+      display:flex; justify-content:center; gap:8px; flex-wrap:wrap; }
+
+    /* ===== 9. Garantia ===== */
+    .guarantee{ background:var(--white); }
+    .guarantee-box{ max-width:720px; margin:0 auto; text-align:center;
+      background:linear-gradient(160deg,var(--olive-soft),var(--gold-soft));
+      border:1px solid var(--border); border-radius:var(--radius-lg); padding:48px 40px; }
+    .seal-days-img{ width:250px; height:250px; max-width:80%; margin:0 auto 24px; display:block;
+      object-fit:contain; filter:drop-shadow(var(--shadow-medium)); }
+    .guarantee-box h2{ font-family:var(--font-display); font-weight:800; font-size:1.7rem;
+                       color:var(--text-dark); margin-bottom:14px; }
+    .guarantee-box p{ font-size:1.05rem; }
+    .guarantee-box p strong{ color:var(--primary); }
+
+    /* ===== 10. FAQ ===== */
+    .faq{ background:linear-gradient(180deg,var(--bg-marfim),var(--white)); }
+    .faq-list{ max-width:720px; margin:0 auto; display:flex; flex-direction:column; gap:14px; }
+    .faq-item{ background:#fff; border:1px solid var(--border);
+      border-radius:var(--radius-md); overflow:hidden; transition:var(--transition); }
+    .faq-item[open]{ box-shadow:var(--shadow-subtle); border-color:var(--gold); }
+    .faq-item summary{ list-style:none; cursor:pointer; padding:22px 26px;
+      font-family:var(--font-num); font-weight:700; color:var(--text-dark);
+      display:flex; justify-content:space-between; align-items:center; gap:16px; }
+    .faq-item summary::-webkit-details-marker{ display:none; }
+    .faq-item summary .plus{ flex:none; color:var(--primary); font-size:1.5rem;
+                             transition:transform .3s; line-height:1; }
+    .faq-item[open] summary .plus{ transform:rotate(45deg); }
+    .faq-item .answer{ padding:0 26px 24px; line-height:1.6; }
+
+    /* ===== 11. CTA final ===== */
+    .final{
+      background:
+        radial-gradient(900px 460px at 50% -6%, hsl(210,60%,42%), transparent 62%),
+        linear-gradient(160deg,hsl(214,66%,22%),hsl(214,72%,13%));
+      color:#fff; text-align:center;
+    }
+    .final .eyebrow{ color:var(--gold-light); font-family:var(--font-num); font-weight:700;
+      letter-spacing:.16em; text-transform:uppercase; font-size:.75rem; }
+    .final h2{ font-family:var(--font-display); font-weight:800;
+      font-size:clamp(1.9rem,5vw,3rem); margin:16px auto 18px; max-width:660px; }
+    .final h2 .hl{ color:inherit; }
+    .final p.urg{ display:inline-flex; align-items:center; gap:9px;
+      background:hsla(0,0%,100%,.1); border:1px solid hsla(198,60%,70%,.3);
+      color:var(--gold-light); border-radius:var(--radius-pill);
+      padding:10px 22px; font-weight:600; margin-bottom:30px; }
+
+    /* ===== 12. Footer ===== */
+    footer{ background:hsl(214,40%,9%); color:hsl(200,35%,88%);
+            padding:52px 0 40px; text-align:center; }
+    footer .brand{ font-family:var(--font-display); font-weight:700;
+                   color:var(--gold-light); font-size:1.24rem; margin-bottom:10px; }
+    footer .verse{ font-family:var(--font-serif); font-style:italic; font-size:1.15rem;
+      color:hsl(200,42%,90%); margin-bottom:22px; max-width:540px; margin-inline:auto; }
+    footer .disclaimer{ font-size:.8rem; line-height:1.6; max-width:700px;
+                        margin:22px auto 0; color:hsla(200,28%,82%,.72); }
+    footer .copy{ font-size:.82rem; margin-top:18px; }
+
+    /* ===== Modal downsell ===== */
+    .downsell-overlay{ position:fixed; inset:0; background:hsla(214,50%,10%,.72);
+      backdrop-filter:blur(4px); display:none; align-items:center; justify-content:center;
+      padding:20px; z-index:120; }
+    .downsell-overlay.open{ display:flex; }
+    .downsell-modal{ background:var(--bg-marfim); border-radius:var(--radius-lg);
+      max-width:460px; width:100%; padding:38px 32px; text-align:center;
+      box-shadow:var(--shadow-large); position:relative; border:2px solid var(--gold);
+      animation:pop .35s cubic-bezier(.2,.8,.3,1.2); }
+    @keyframes pop{ from{transform:scale(.9); opacity:0} to{transform:scale(1); opacity:1} }
+    .downsell-modal .close{ position:absolute; top:14px; right:16px; background:none;
+      border:none; font-size:1.5rem; color:var(--text-muted); cursor:pointer; }
+    .downsell-modal .dtag{ font-family:var(--font-num); font-weight:800; font-size:.74rem;
+      letter-spacing:.1em; text-transform:uppercase; color:var(--gold-dark); margin-bottom:10px; }
+    .downsell-modal .dmockup{ display:block; width:100%; max-width:300px; height:auto;
+      margin:4px auto 12px; }
+    .downsell-modal h3{ font-family:var(--font-display); font-weight:700; font-size:1.5rem;
+                        color:var(--primary); margin-bottom:12px; }
+    .downsell-modal p{ font-size:1rem; }
+    .downsell-modal .dprice{ font-family:var(--font-num); font-weight:800; font-size:2.2rem;
+                             color:var(--buy-dark); margin:14px 0 22px; }
+    .downsell-modal .dprice s{ font-size:1.1rem; color:hsl(0,72%,50%); margin-right:8px; }
+    .downsell-modal .refuse{ display:block; margin-top:16px; font-size:.86rem;
+      color:var(--text-muted); text-decoration:underline; }
+
+    /* ===== Reveal ===== */
+    .reveal{ opacity:0; transform:translateY(28px);
+      transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.3,1); }
+    .reveal.in{ opacity:1; transform:none; }
+    .delay-1{ transition-delay:.12s; }
+    .delay-2{ transition-delay:.24s; }
+    .delay-3{ transition-delay:.36s; }
+
+    /* ===== Breakpoints ===== */
+    @media (max-width:900px){
+      .offer-grid{ grid-template-columns:1fr; }
+      .flip-embed{ padding:5px; }
+      .flip-embed .fp-iframe{ height:640px; }
+      .pm-img{ height:460px; }
+    }
+    @media (max-width:768px){
+      section{ padding:64px 0; }
+      .grid-desire,.compare-grid,.grid-persona,.grid-bonus,.grid-testi{ grid-template-columns:1fr; }
+      .grid-bonus{ row-gap:68px; }
+      .desire-card--wide{ grid-column:span 1; display:block; }
+      .desire-card--wide .card-img{ width:calc(100% + 52px); flex:none; margin:-30px -26px 22px;
+        aspect-ratio:1 / 1.414; border-right:none; border-bottom:1px solid var(--border);
+        -webkit-mask-image:linear-gradient(180deg,#000 78%,transparent);
+                mask-image:linear-gradient(180deg,#000 78%,transparent); }
+    }
+    @media (max-width:560px){
+      .flip-embed{ padding:4px; }
+      .flip-embed .fp-iframe{ height:480px; }
+      .pm-img{ height:340px; }
+      .btn{ font-size:.94rem; padding:16px 20px; gap:.4em; }
+      .btn-lg{ width:100%; font-size:1rem; padding:18px 18px; }
+    }
+    @media (max-width:380px){
+      .btn{ font-size:.86rem; padding:15px 14px; }
+      .btn-lg{ font-size:.92rem; padding:17px 14px; }
+      /* garante que os títulos de destaque caibam em 1 linha nas telas mais estreitas */
+      .hero h1{ font-size:5.2vw; }
+    }
+    @media (prefers-reduced-motion: reduce){
+      *{ animation:none !important; scroll-behavior:auto; }
+      .reveal{ opacity:1; transform:none; transition:none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== 0b. BARRA DE URGÊNCIA ===== -->
+  <div class="urgencybar">
+    <span class="clock">⏰</span> OFERTA VÁLIDA SOMENTE HOJE! <span id="urgDate"></span>
+  </div>
+
+  <!-- ===== 1. HERO ===== -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-stack">
+        <h1 class="reveal in">
+          <span class="l1">100 Defeitos de Lavadoras:</span>
+          <span class="hl-block">Manual Visual de Diagnóstico</span>
+          <span class="l3">para achar o defeito e saber por onde começar</span>
+        </h1>
+
+        <p class="sub reveal in delay-1">
+          <b>100 sintomas</b> de máquinas de lavar organizados em sequência de investigação,
+          top load, front load e lava e seca. Você abre no celular, acha o sintoma e enxerga
+          na hora <b>o que verificar primeiro</b>.
+        </p>
+
+        <div class="book-stage reveal in delay-1">
+          <div class="book-glow"></div>
+          <img src="assets/mockups/mockup-principal.png" class="hero-mockup"
+               alt="Manual 100 Defeitos de Lavadoras aberto no notebook e no celular, ao lado do ebook e das fichas de diagnóstico"
+               fetchpriority="high" />
+        </div>
+
+        <div class="hero-trust reveal in delay-2">
+          <span>⚡ Acesso imediato</span>
+          <span>📱 100% digital</span>
+        </div>
+
+        <div class="hero-delivery reveal in delay-2">
+          Você recebe tudo na hora, direto no seu
+          <span class="nowrap"><img src="icon-wpp.webp" alt="WhatsApp" class="hero-delivery-ic" /><b>WhatsApp</b></span>
+          e no seu
+          <span class="nowrap"><img src="icon-email.webp" alt="E-mail" class="hero-delivery-ic" /><b>e-mail</b></span>
+        </div>
+
+        <div class="hero-cta reveal in delay-2">
+          <a href="#comprar" class="btn btn-buy btn-lg">Quero o meu manual de consulta <span class="arrow">➔</span></a>
+        </div>
+
+        <div class="hero-social reveal in delay-3">
+          <div class="hero-social-avatars">
+            <img src="assets/depoimentos/hero-1.jpg" loading="lazy" alt="" />
+            <img src="assets/depoimentos/hero-2.jpg" loading="lazy" alt="" />
+            <img src="assets/depoimentos/hero-3.jpg" loading="lazy" alt="" />
+            <img src="assets/depoimentos/hero-4.jpg" loading="lazy" alt="" />
+            <img src="assets/depoimentos/hero-5.jpg" loading="lazy" alt="" />
+          </div>
+          <span class="hero-social-label">MAIS DE 1.000 TÉCNICOS!</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== 2. VITRINE ===== -->
+  <section class="vitrine">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">O que você tem em mãos</span>
+        <h2>Cada sintoma vira uma <span class="hl">ficha visual</span> de diagnóstico</h2>
+        <div class="rule"></div>
+        <p>Você não recebe texto corrido. Recebe fichas que mostram o caminho, do sintoma até os possíveis próximos passos.</p>
+      </div>
+
+      <div class="grid-desire">
+        <div class="desire-card reveal">
+          <img class="card-img" src="assets/vitrine/nao-centrifuga.png" loading="lazy" alt="Ficha de diagnóstico: lavadora não centrifuga" />
+          <span class="verse">Centrifugação</span>
+          <h3>Ela não centrifuga</h3>
+          <p>Drena a água, mas o cesto não gira. A ficha separa cada possível causa em ordem.</p>
+          <span class="quote">"Lava, enxágua, mas não roda e deixa a roupa encharcada."</span>
+        </div>
+
+        <div class="desire-card reveal delay-1">
+          <img class="card-img" src="assets/vitrine/nao-inicia-ciclo.png" loading="lazy" alt="Ficha de diagnóstico: lavadora liga mas não inicia o ciclo" />
+          <span class="verse">Início do ciclo</span>
+          <h3>Liga, mas não inicia</h3>
+          <p>Trava, sensor de nível, chicote ou placa: a sequência mostra o que checar primeiro.</p>
+          <span class="quote">"O painel acende, seleciono o ciclo, mas nada acontece."</span>
+        </div>
+
+        <div class="desire-card reveal delay-2">
+          <img class="card-img" src="assets/vitrine/nao-enche-agua.png" loading="lazy" alt="Ficha de diagnóstico: lavadora não enche de água" />
+          <span class="verse">Entrada de água</span>
+          <h3>Não entra água</h3>
+          <p>Da válvula solenoide ao pressostato: o que checar primeiro, em ordem.</p>
+          <span class="quote">"Liga, mas fica esperando encher e nunca começa."</span>
+        </div>
+
+        <div class="desire-card reveal">
+          <img class="card-img" src="assets/vitrine/para-durante-ciclo.png" loading="lazy" alt="Ficha de diagnóstico: lavadora para durante o ciclo" />
+          <span class="verse">Ciclo interrompido</span>
+          <h3>Para no meio do ciclo</h3>
+          <p>Proteção térmica, drenagem, pressostato ou placa: o mapa dos suspeitos.</p>
+          <span class="quote">"Começa a lavar, mas trava antes do fim e deixa água dentro."</span>
+        </div>
+
+        <div class="desire-card desire-card--wide reveal delay-1">
+          <img class="card-img" src="assets/vitrine/capa.png" loading="lazy" alt="Capa do manual 100 Defeitos de Lavadoras" />
+          <div>
+            <span class="verse">Todos os 100</span>
+            <h3>Do "não liga" ao "não seca"</h3>
+            <p>São <strong>100 sintomas</strong> cobrindo top load, front load e lava e seca das marcas mais comuns: Electrolux, Brastemp, Consul, LG, Samsung e Midea.</p>
+            <span class="quote">"Aquele defeito que você não reconhece na hora está aqui, com um caminho pra seguir."</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="desire-strip reveal">
+        <span class="ds-icon">✦ ✦ ✦</span>
+        <p class="ds-text">
+          <strong>100 sintomas.</strong> Cada um com sua sequência de investigação, para você chegar
+          <span class="ds-underline">mais organizado</span> ao diagnóstico.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3. COMPARATIVO ===== -->
+  <section class="compare">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Antes e depois</span>
+        <h2>Diagnosticar de cabeça é uma coisa. <br>Com um manual de consulta é outra.</h2>
+        <div class="rule"></div>
+      </div>
+
+      <div class="compare-grid">
+        <div class="compare-col bad reveal">
+          <span class="tag"><span class="chk">✕</span> Sem o Manual de Diagnóstico</span>
+          <ul>
+            <li><span class="ic">✕</span> <span class="txt">Abrir vários vídeos a cada defeito novo</span></li>
+            <li><span class="ic">✕</span> <span class="txt">Não saber o que verificar primeiro</span></li>
+            <li><span class="ic">✕</span> <span class="txt">Depender só da memória no atendimento</span></li>
+            <li><span class="ic">✕</span> <span class="txt">Trocar peça e o defeito continuar</span></li>
+            <li><span class="ic">✕</span> <span class="txt">Voltar ao cliente sem ter resolvido</span></li>
+          </ul>
+        </div>
+
+        <div class="compare-col good reveal delay-1">
+          <span class="tag"><span class="chk">✓</span> Com o Manual de Diagnóstico</span>
+          <ul>
+            <li><span class="ic">✓</span> <span class="txt">Abre o manual e acha o sintoma <b>em segundos</b></span></li>
+            <li><span class="ic">✓</span> <span class="txt">Vê logo <b>o que checar primeiro</b></span></li>
+            <li><span class="ic">✓</span> <span class="txt">Consulta a <b>sequência</b> em vez da memória</span></li>
+            <li><span class="ic">✓</span> <span class="txt">Investiga antes de <b>concluir a troca</b></span></li>
+            <li><span class="ic">✓</span> <span class="txt">Conduz o atendimento com <b>mais segurança</b></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 4. VEJA POR DENTRO ===== -->
+  <section class="inside">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Veja por dentro</span>
+        <h2>Não é um ebook de texto. É um <span class="hl">manual visual</span>.</h2>
+        <div class="rule"></div>
+        <p>Fichas, diagramas, fluxogramas e setas, pensados para serem lidos no celular durante o atendimento.</p>
+      </div>
+
+      <div class="flip-wrap reveal">
+        <div class="flip-embed">
+          <script src="https://cdn.heyzine.com/release/addons.5.min.js" style="display:none;" onload="heyzinea.addons.init();"></script>
+          <iframe allowfullscreen="allowfullscreen" allow="autoplay; fullscreen; clipboard-write"
+                  scrolling="no" class="fp-iframe" loading="lazy"
+                  title="Prévia real do manual 100 Defeitos de Lavadoras"
+                  src="https://heyzine.com/flip-book/0736f993e8.html"></iframe>
+        </div>
+        <p class="flip-hint">Folheie as páginas reais do manual: arraste ou use as setas. ✦</p>
+      </div>
+
+      <div class="page-marquee reveal">
+        <div class="pm-row">
+          <div class="pm-track pm-left">
+            <img class="pm-img" src="assets/inside/carrossel/13.png" loading="lazy" alt="Página do manual 100 Defeitos de Lavadoras" />
+            <img class="pm-img" src="assets/inside/carrossel/14.png" loading="lazy" alt="Página do manual 100 Defeitos de Lavadoras" />
+            <img class="pm-img" src="assets/inside/carrossel/15.png" loading="lazy" alt="Página do manual 100 Defeitos de Lavadoras" />
+            <img class="pm-img" src="assets/inside/carrossel/16.png" loading="lazy" alt="Página do manual 100 Defeitos de Lavadoras" />
+            <img class="pm-img" src="assets/inside/carrossel/13.png" aria-hidden="true" alt="" />
+            <img class="pm-img" src="assets/inside/carrossel/14.png" aria-hidden="true" alt="" />
+            <img class="pm-img" src="assets/inside/carrossel/15.png" aria-hidden="true" alt="" />
+            <img class="pm-img" src="assets/inside/carrossel/16.png" aria-hidden="true" alt="" />
+          </div>
+        </div>
+        <div class="pm-row">
+          <div class="pm-track pm-right">
+            <img class="pm-img" src="assets/inside/carrossel/17.png" loading="lazy" alt="Página do manual 100 Defeitos de Lavadoras" />
+            <img class="pm-img" src="assets/inside/carrossel/18.png" loading="lazy" alt="Página do manual 100 Defeitos de Lavadoras" />
+            <img class="pm-img" src="assets/inside/carrossel/19.png" loading="lazy" alt="Página do manual 100 Defeitos de Lavadoras" />
+            <img class="pm-img" src="assets/inside/carrossel/20.png" loading="lazy" alt="Página do manual 100 Defeitos de Lavadoras" />
+            <img class="pm-img" src="assets/inside/carrossel/17.png" aria-hidden="true" alt="" />
+            <img class="pm-img" src="assets/inside/carrossel/18.png" aria-hidden="true" alt="" />
+            <img class="pm-img" src="assets/inside/carrossel/19.png" aria-hidden="true" alt="" />
+            <img class="pm-img" src="assets/inside/carrossel/20.png" aria-hidden="true" alt="" />
+          </div>
+        </div>
+        <div class="pm-row">
+          <div class="pm-track pm-left pm-slow">
+            <img class="pm-img" src="assets/inside/carrossel/21.png" loading="lazy" alt="Página do manual 100 Defeitos de Lavadoras" />
+            <img class="pm-img" src="assets/inside/carrossel/22.png" loading="lazy" alt="Página do manual 100 Defeitos de Lavadoras" />
+            <img class="pm-img" src="assets/inside/carrossel/23.png" loading="lazy" alt="Página do manual 100 Defeitos de Lavadoras" />
+            <img class="pm-img" src="assets/inside/carrossel/21.png" aria-hidden="true" alt="" />
+            <img class="pm-img" src="assets/inside/carrossel/22.png" aria-hidden="true" alt="" />
+            <img class="pm-img" src="assets/inside/carrossel/23.png" aria-hidden="true" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="mid-cta reveal">
+        <p>São <strong>100 fichas de sintoma</strong> no seu bolso, prontas para a próxima máquina.</p>
+        <p class="small">Em vez de procurar do zero, você localiza o defeito e vê o caminho.</p>
+        <a href="#comprar" class="btn btn-lg">Quero ter esse manual no celular <span class="arrow">➔</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 5. PRA QUEM É ===== -->
+  <section class="personas">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Pra quem é</span>
+        <h2>Feito para quem já <span class="hl">põe a mão na máquina</span></h2>
+        <div class="rule"></div>
+        <p>Não é um curso pra virar técnico do zero. É a ferramenta de consulta de quem já atende.</p>
+      </div>
+
+      <div class="grid-persona">
+        <div class="persona-card reveal">
+          <div class="ic">🧰</div>
+          <h3>O técnico autônomo</h3>
+          <p>Que atende em domicílio e quer resolver mais no primeiro atendimento.</p>
+        </div>
+        <div class="persona-card reveal delay-1">
+          <div class="ic">🔩</div>
+          <h3>O que está começando</h3>
+          <p>Que já faz reparos, mas ainda trava em alguns diagnósticos e quer uma referência.</p>
+        </div>
+        <div class="persona-card reveal delay-2">
+          <div class="ic">🏪</div>
+          <h3>A assistência técnica</h3>
+          <p>Que quer padronizar o raciocínio da equipe e ganhar tempo em cada chamado.</p>
+        </div>
+      </div>
+
+      <p class="persona-extra reveal">E também para o <span>técnico mais experiente</span> que só quer uma consulta rápida quando aparece um modelo menos familiar. ✦</p>
+    </div>
+  </section>
+
+  <!-- ===== 6. BÔNUS ===== -->
+  <section class="bonus">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Você não leva só o manual</span>
+        <h2>Você também recebe <span class="hl">3 bônus</span> exclusivos</h2>
+        <div class="rule"></div>
+        <p>Ferramentas extras que se somam ao manual para deixar o atendimento ainda mais rápido.</p>
+      </div>
+
+      <div class="grid-bonus">
+        <div class="bonus-card reveal">
+          <div class="cover">
+            <img src="assets/mockups/bonus-codigos-erro.png" loading="lazy" alt="Bônus: Guia de Códigos de Erro, mockup" />
+          </div>
+          <h3>Guia de Códigos de Erro</h3>
+          <p>Referência de códigos das marcas mais comuns para cruzar com o sintoma na hora.</p>
+          <div class="bonus-price">
+            <s>R$ 47</s>
+            <span class="free">VAI SAIR DE GRAÇA</span>
+          </div>
+        </div>
+
+        <div class="bonus-card reveal delay-1">
+          <div class="cover">
+            <img src="assets/mockups/bonus-checklist.png" loading="lazy" alt="Bônus: Checklist de Atendimento, mockup" />
+          </div>
+          <h3>Checklist de Atendimento</h3>
+          <p>Roteiro passo a passo para não esquecer nenhuma verificação diante do cliente.</p>
+          <div class="bonus-price">
+            <s>R$ 37</s>
+            <span class="free">VAI SAIR DE GRAÇA</span>
+          </div>
+        </div>
+
+        <div class="bonus-card reveal delay-2">
+          <div class="cover">
+            <img src="assets/mockups/bonus-mapa-componentes.png" loading="lazy" alt="Bônus: Mapa de Componentes, mockup" />
+          </div>
+          <h3>Mapa de Componentes</h3>
+          <p>Visual dos principais componentes e o que cada um pode causar quando falha.</p>
+          <div class="bonus-price">
+            <s>R$ 57</s>
+            <span class="free">VAI SAIR DE GRAÇA</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bonus-final reveal">
+        <span class="bonus-final-badge">🎁 Os 3 bônus juntos</span>
+        <p class="bonus-sum">Só em bônus são <span class="was"><s>R$ 141</s></span>, que hoje entram <strong>totalmente de graça</strong> pra você.</p>
+        <a href="#comprar" class="btn btn-buy btn-lg">Quero o manual + os 3 bônus <span class="arrow">➔</span></a>
+        <span class="bonus-final-note">✦ Oferta válida enquanto os bônus estiverem disponíveis</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 7. DEPOIMENTOS ===== -->
+  <section class="testi">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Quem já usa</span>
+        <h2>O que dizem <span class="hl">outros técnicos</span></h2>
+        <div class="rule"></div>
+        <p>Relatos de profissionais que passaram a consultar o manual no dia a dia.</p>
+      </div>
+
+      <div class="grid-testi">
+        <div class="testi-card reveal">
+          <div class="testi-head">
+            <img class="avatar" src="assets/depoimentos/carlos.jpg" loading="lazy" alt="Foto de Carlos R." />
+            <span class="name">Carlos R.</span>
+            <span class="meta"><span class="verified">✔ Verificado</span> · Guarulhos/SP</span>
+          </div>
+          <div class="stars">★★★★★</div>
+          <p class="quote">"Deixei salvo no celular. Chegou uma que <strong>não centrifugava</strong> e eu já fui direto na sequência, sem ficar procurando vídeo."</p>
+        </div>
+
+        <div class="testi-card reveal delay-1">
+          <div class="testi-head">
+            <img class="avatar" src="assets/depoimentos/andre.jpg" loading="lazy" alt="Foto de André M." />
+            <span class="name">André M.</span>
+            <span class="meta"><span class="verified">✔ Verificado</span> · Contagem/MG</span>
+          </div>
+          <div class="stars">★★★★★</div>
+          <p class="quote">"Tô começando agora e o que mais me ajudou foi ver <strong>o que checar primeiro</strong>. Parei de sair trocando peça no chute."</p>
+        </div>
+
+        <div class="testi-card reveal delay-2">
+          <div class="testi-head">
+            <img class="avatar" src="assets/depoimentos/juliana.jpg" loading="lazy" alt="Foto de Juliana S." />
+            <span class="name">Juliana S.</span>
+            <span class="meta"><span class="verified">✔ Verificado</span> · Curitiba/PR</span>
+          </div>
+          <div class="stars">★★★★★</div>
+          <p class="quote">"Tenho uma pequena assistência e passei pra equipe. Ajudou a <strong>padronizar</strong> a forma como a gente investiga cada chamado."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 8. OFERTA ===== -->
+  <section class="offer" id="comprar">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">A oferta de hoje</span>
+        <h2>Escolha como quer levar o <span class="hl">seu manual</span></h2>
+        <div class="rule"></div>
+        <p>Dois planos. Um leva só o manual. O outro leva o manual + os 3 bônus por quase o mesmo valor.</p>
+      </div>
+
+      <div class="offer-grid">
+
+        <!-- BÁSICO (decoy) -->
+        <div class="plan basic reveal">
+          <h3>Só o Manual</h3>
+          <p class="psub">O manual de 100 defeitos, sem os bônus.</p>
+          <div class="price">R$ 22,90</div>
+          <ul>
+            <li class="yes"><span class="ic">✓</span> <span class="txt">As 100 fichas de sintoma em PDF</span></li>
+            <li class="yes"><span class="ic">✓</span> <span class="txt">Sequência de diagnóstico por sintoma</span></li>
+            <li class="no"><span class="ic">✕</span> <span class="txt">Guia de Códigos de Erro</span></li>
+            <li class="no"><span class="ic">✕</span> <span class="txt">Checklist de Atendimento</span></li>
+            <li class="no"><span class="ic">✕</span> <span class="txt">Mapa de Componentes</span></li>
+          </ul>
+          <button class="btn btn-ghost btn-block" id="abrirDownsell">Quero só o básico</button>
+        </div>
+
+        <!-- VIP -->
+        <div class="plan vip reveal delay-1">
+          <span class="ribbon">⭐ O Mais Escolhido</span>
+
+          <h3>Manual Completo + 3 Bônus</h3>
+          <p class="psub">Tudo o que você precisa para consultar no atendimento.</p>
+
+          <img class="plan-mockup" src="assets/mockups/plano-completo.png" loading="lazy"
+               alt="Pacote completo: manual 100 Defeitos de Lavadoras + 3 bônus" />
+
+          <div class="price-row">
+            <span class="anchor">De <s>R$ 141</s> por apenas</span>
+            <span class="price">R$ 29,90</span>
+          </div>
+          <div class="installment">ou 12x de R$ 3,01 · pagamento único</div>
+
+          <ul>
+            <li class="yes"><span class="ic">✓</span> <span class="txt">As <strong>100 fichas</strong> de sintoma em PDF</span></li>
+            <li class="yes"><span class="ic">✓</span> <span class="txt">Sequência: sintoma → causas → verificação</span></li>
+            <li class="yes"><span class="ic">✓</span> <span class="txt"><strong>Bônus:</strong> Guia de Códigos de Erro</span></li>
+            <li class="yes"><span class="ic">✓</span> <span class="txt"><strong>Bônus:</strong> Checklist de Atendimento</span></li>
+            <li class="yes"><span class="ic">✓</span> <span class="txt"><strong>Bônus:</strong> Mapa de Componentes</span></li>
+            <li class="yes"><span class="ic">✓</span> <span class="txt">Acesso imediato e vitalício</span></li>
+          </ul>
+
+          <a href="#" class="btn btn-buy btn-lg btn-block" data-checkout="vip">
+            Quero o manual completo <span class="arrow">➔</span>
+          </a>
+
+          <div class="offer-secure">
+            <span>🔒 Compra 100% segura</span> <span>•</span>
+            <span>🛡️ Garantia de 15 dias</span> <span>•</span>
+            <span>⚡ Acesso imediato</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 9. GARANTIA ===== -->
+  <section class="guarantee">
+    <div class="container">
+      <div class="guarantee-box reveal">
+        <img class="seal-days-img" src="assets/garantia-15-dias.avif" alt="Selo de garantia de 15 dias" loading="lazy" />
+        <h2>O risco é todo meu</h2>
+        <p>Você pode adquirir hoje, abrir o manual e usar em alguns atendimentos com calma.
+          Se em <strong>15 dias</strong> achar que não é pra você, é só pedir: devolvo todo o
+          seu dinheiro, sem perguntas, sem complicação.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 10. FAQ ===== -->
+  <section class="faq">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Dúvidas rápidas</span>
+        <h2>Perguntas <span class="hl">frequentes</span></h2>
+        <div class="rule"></div>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item reveal">
+          <summary>Como eu recebo o material? <span class="plus">+</span></summary>
+          <div class="answer">É digital, em PDF. Assim que o pagamento é confirmado, o acesso chega no seu e-mail: você baixa e já deixa salvo no celular para consultar quando quiser.</div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Isso é um curso pra me tornar técnico? <span class="plus">+</span></summary>
+          <div class="answer">Não. É um manual de consulta para quem já trabalha ou está começando a trabalhar com máquinas de lavar. Ele organiza o raciocínio do diagnóstico, não substitui a sua experiência nem as ferramentas.</div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Preciso ser experiente para aproveitar? <span class="plus">+</span></summary>
+          <div class="answer">Não. Se você já faz reparos, ele te dá uma sequência pronta pra seguir. Quem tem mais experiência usa como consulta rápida em modelos menos familiares.</div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Serve para as marcas que eu atendo? <span class="plus">+</span></summary>
+          <div class="answer">O manual cobre famílias e marcas populares (Electrolux, Brastemp, Consul, LG, Samsung e Midea) em top load, front load e lava e seca, com os sintomas mais comuns do dia a dia.</div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>E se eu não gostar? <span class="plus">+</span></summary>
+          <div class="answer">Você tem 15 dias de garantia. Se achar que não te ajuda, devolvo todo o valor, sem perguntas. O risco fica todo comigo.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 11. CTA FINAL ===== -->
+  <section class="final">
+    <div class="container narrow">
+      <span class="eyebrow reveal">Última chamada</span>
+      <h2 class="reveal">Da próxima vez que a máquina não reconhecer, tenha <span class="hl">o caminho no bolso</span></h2>
+      <p class="urg reveal">⏳ Oferta com os 3 bônus por tempo limitado</p>
+      <br>
+      <a href="#comprar" class="btn btn-gold btn-lg reveal delay-1">Quero o meu manual de consulta <span class="arrow">➔</span></a>
+    </div>
+  </section>
+
+  <!-- ===== 12. FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="brand">100 Defeitos de Lavadoras</div>
+      <p class="verse">"O sintoma você já vê. O que faltava era saber por onde começar."</p>
+      <p class="copy">© 2026 100 Defeitos de Lavadoras. Todos os direitos reservados.</p>
+      <p class="disclaimer">
+        Este é um material digital de apoio ao diagnóstico. Ele não substitui conhecimento técnico,
+        experiência, ferramentas adequadas ou os manuais específicos dos fabricantes, e não garante
+        a solução de todos os defeitos. Os relatos apresentados são pessoais e não representam
+        promessa de resultado. Este site não tem vínculo com Facebook, Instagram ou Google.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ===== MODAL DOWNSELL ===== -->
+  <div class="downsell-overlay" id="downsellOverlay" role="dialog" aria-modal="true" aria-labelledby="downsellTitle">
+    <div class="downsell-modal">
+      <button class="close" id="fecharDownsell" aria-label="Fechar">×</button>
+      <span class="dtag">Espere! Uma oferta só pra você</span>
+      <img class="dmockup" src="assets/mockups/plano-completo.png" loading="lazy"
+           alt="Pacote completo: manual 100 Defeitos de Lavadoras + 3 bônus" />
+      <h3 id="downsellTitle">Leve o pacote completo por menos</h3>
+      <p>Antes de seguir só com o básico… que tal levar o <strong>manual completo + os 3 bônus</strong> por um valor especial?</p>
+      <div class="dprice"><s>R$ 29,90</s> R$ 25,90</div>
+      <a href="#" class="btn btn-buy btn-block" data-checkout="downsell">Sim, quero o pacote completo</a>
+      <a href="#" class="refuse" id="recusarDownsell" data-checkout="basico">Não, prefiro só o básico por R$ 22,90</a>
+    </div>
+  </div>
+
+  <script>
+  /* 1. SCROLL-REVEAL */
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    if(!els.length) return;
+    if(!('IntersectionObserver' in window)){
+      for(var k=0;k<els.length;k++) els[k].classList.add('in');
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold:.14, rootMargin:'0px 0px -8% 0px' });
+    els.forEach(function(el){ io.observe(el); });
+  })();
+
+  /* 2. MODAL DOWNSELL */
+  (function(){
+    var open    = document.getElementById('abrirDownsell');
+    var overlay = document.getElementById('downsellOverlay');
+    var close   = document.getElementById('fecharDownsell');
+    if(!open || !overlay) return;
+    function show(e){ if(e) e.preventDefault(); overlay.classList.add('open');
+                      document.body.style.overflow='hidden'; }
+    function hide(){ overlay.classList.remove('open'); document.body.style.overflow=''; }
+    open.addEventListener('click', show);
+    if(close) close.addEventListener('click', hide);
+    overlay.addEventListener('click', function(e){ if(e.target===overlay) hide(); });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape') hide(); });
+  })();
+
+  /* 3. CHECKOUT */
+  (function(){
+    var LINKS = {
+      vip:      'https://pay.wiapy.com/3i03Yzuanwh8',
+      downsell: 'https://pay.wiapy.com/EvNCSmUqga4S',
+      basico:   'https://pay.wiapy.com/gjtmL8STH7j'
+    };
+    var btns = document.querySelectorAll('[data-checkout]');
+    if(!btns.length) return;
+    btns.forEach(function(b){
+      var key = b.getAttribute('data-checkout');
+      if(LINKS[key]) b.setAttribute('href', LINKS[key]);
+    });
+  })();
+
+  /* 3b. DATA DE URGÊNCIA — sempre "hoje" */
+  (function(){
+    var el = document.getElementById('urgDate');
+    if(!el) return;
+    var d = new Date();
+    var dd = String(d.getDate()).padStart(2,'0');
+    var mm = String(d.getMonth()+1).padStart(2,'0');
+    el.textContent = dd + '/' + mm + '/' + d.getFullYear();
+  })();
+
+  /* 5. SCROLL-DRIVEN DESIRE STRIP */
+  (function(){
+    var strip = document.querySelector('.desire-strip');
+    if(!strip) return;
+    var ticking = false;
+    function update(){
+      var r  = strip.getBoundingClientRect();
+      var vh = window.innerHeight || document.documentElement.clientHeight;
+      var mid = r.top + r.height/2;
+      var start = vh * 0.85, end = vh * 0.5;
+      var p = (start - mid) / (start - end);
+      p = Math.max(0, Math.min(1, p));
+      strip.style.setProperty('--scroll', p.toFixed(4));
+      ticking = false;
+    }
+    function onScroll(){ if(!ticking){ ticking = true; requestAnimationFrame(update); } }
+    window.addEventListener('scroll', onScroll, { passive:true });
+    window.addEventListener('resize', onScroll, { passive:true });
+    update();
+  })();
+  </script>
+
+</body>
+</html>
