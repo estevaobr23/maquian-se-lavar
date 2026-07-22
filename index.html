@@ -1186,18 +1186,71 @@
     document.addEventListener('keydown', function(e){ if(e.key==='Escape') hide(); });
   })();
 
-  /* 3. CHECKOUT */
+  /* 3. CHECKOUT — com propagação de UTMs até o pagamento */
   (function(){
     var LINKS = {
       vip:      'https://pay.wiapy.com/3i03Yzuanwh8',
       downsell: 'https://pay.wiapy.com/EvNCSmUqga4S',
       basico:   'https://pay.wiapy.com/gjtmL8STH7j'
     };
+
+    /* Parâmetros de rastreamento que devem viajar do anúncio até o checkout */
+    var TRACK_KEYS = [
+      'utm_source','utm_medium','utm_campaign','utm_content','utm_term',
+      'utm_id','src','sck','xcod','fbclid','gclid','ttclid','gbraid','wbraid'
+    ];
+    var STORE_KEY = 'trk_params';
+
+    /* 1) Captura os parâmetros da URL atual e mescla com o que já ficou salvo
+          na sessão (para não perder as UTMs em recarregamentos ou navegação). */
+    function collectParams(){
+      var params = {};
+      try {
+        var saved = sessionStorage.getItem(STORE_KEY);
+        if(saved) params = JSON.parse(saved) || {};
+      } catch(e){}
+
+      var current = new URLSearchParams(window.location.search);
+      TRACK_KEYS.forEach(function(k){
+        var v = current.get(k);
+        if(v !== null && v !== '') params[k] = v;
+      });
+
+      try { sessionStorage.setItem(STORE_KEY, JSON.stringify(params)); } catch(e){}
+      return params;
+    }
+
+    /* 2) Anexa os parâmetros a um link de checkout, preservando qualquer
+          query string que o próprio link já possua. */
+    function buildUrl(base, params){
+      try {
+        var url = new URL(base);
+        Object.keys(params).forEach(function(k){
+          if(params[k] !== undefined && params[k] !== null && params[k] !== '')
+            url.searchParams.set(k, params[k]);
+        });
+        return url.toString();
+      } catch(e){
+        return base;
+      }
+    }
+
     var btns = document.querySelectorAll('[data-checkout]');
     if(!btns.length) return;
+
+    function applyLinks(){
+      var params = collectParams();
+      btns.forEach(function(b){
+        var key = b.getAttribute('data-checkout');
+        if(LINKS[key]) b.setAttribute('href', buildUrl(LINKS[key], params));
+      });
+    }
+
+    /* 3) Aplica ao carregar e reforça no clique (captura qualquer parâmetro
+          que tenha chegado depois — ex.: fbclid injetado por scripts). */
+    applyLinks();
     btns.forEach(function(b){
-      var key = b.getAttribute('data-checkout');
-      if(LINKS[key]) b.setAttribute('href', LINKS[key]);
+      b.addEventListener('click', applyLinks);
     });
   })();
 
